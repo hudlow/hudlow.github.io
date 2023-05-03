@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    body {
+	background: #d4d4d4;
+    }
+
+    @keyframes tumble-1 {
+  	0%   { filter: hue-rotate(0deg); left: -256px; top: -256px; }
+  	100%  { filter: hue-rotate(360deg); left: 100%; top: 100%; }
+   }
+
+    @keyframes tumble-2 {
+  	0%   { filter: hue-rotate(0deg); left: calc(-256px + 33.33%); top: -256px; }
+  	100%  { filter: hue-rotate(360deg); left: 100%; top: 66.66%; }
+   }
+
+    @keyframes tumble-3 {
+  	0%   { filter: hue-rotate(0deg); left: -256px; top: calc(-256px + 33.33)%; }
+  	100%  { filter: hue-rotate(360deg); left: 66.66%; top: 100%; }
+   }
+
+    video {
+       height: 256px;
+       width: 256px;
+       background: #d4d4d4;
+       animation-name: tumble-1;
+       animation-duration: 240s;
+       animation-iteration-count: infinite;
+       animation-timing-function: linear;
+       mask-image: url(mask.png);
+       position: fixed;
+      z-index: -1;
+    }
+
+#background-video-2 {
+       animation-name: tumble-2;
+       animation-delay: -60s;
+       transform: rotate(120deg);
+}
+
+#background-video-3 {
+       animation-name: tumble-3;
+       animation-delay: -120s;
+       transform: rotate(240deg);
+}
+
+#page {
+-webkit-backdrop-filter: blur(16px);
+widthl: ;
+max-width: 640px;
+margin: 64px auto;
+padding: 32px 64px;
+background: rgba(256,256,256, 0.5);
+font-family: Baskerville;
+font-size: 16pt;
+line-height: 24pt;
+box-shadow: 2px 2px 32px 8px rgba(0, 0, 0, 0.1);
+border-radius: 4px;
+}
+
+}
+  </style>
+</head>
+<body>
+<video id="background-video-1" autoplay loop muted>
+<source src="brick.mp4" type="video/mp4">
+</video>
+<video id="background-video-2" autoplay loop muted>
+<source src="brick.mp4" type="video/mp4">
+</video>
+<video id="background-video-3" autoplay loop muted>
+<source src="brick.mp4" type="video/mp4">
+</video>
+
+<div id="page">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at imperdiet felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed in metus sapien. Donec sed molestie orci, eget cursus augue. Nunc finibus scelerisque orci non euismod. Donec luctus congue metus, sit amet pretium mauris scelerisque eget. Donec ullamcorper, nunc a pulvinar congue, orci velit lacinia est, faucibus vehicula sapien dui nec ex. Donec dignissim massa non magna auctor, in pulvinar nisi auctor. Praesent id maximus nunc. Maecenas semper justo pellentesque risus pretium, vel vestibulum quam pharetra. Donec molestie pulvinar velit, id elementum libero porta quis. Nunc posuere, sem eget auctor mollis, arcu diam scelerisque tortor, quis tincidunt ex velit eget sapien. Phasellus luctus porttitor turpis et tristique. Fusce pulvinar tellus quis purus ornare, ac tristique eros ultrices.</p>
+
+<p>Praesent lorem lorem, sodales quis mollis sed, hendrerit pharetra nulla. Fusce efficitur, metus eu eleifend mollis, odio nisi imperdiet massa, sed auctor est nisi ut leo. Proin eros neque, tincidunt vel lorem nec, efficitur luctus nunc. Vivamus venenatis luctus erat, vestibulum facilisis eros volutpat nec. Etiam at ultricies lorem. Integer at eros interdum, hendrerit lectus sit amet, viverra lacus. In tincidunt elit non cursus tristique. Sed commodo elit nec ligula tristique, at venenatis ante tempus. Proin augue arcu, gravida eget neque lacinia, bibendum consectetur est. Sed in malesuada libero. Cras a nunc iaculis, vulputate mauris ultrices, porttitor justo. Suspendisse in diam non magna imperdiet venenatis id at libero. Vivamus sed nisl vitae enim varius interdum non sit amet nisi.</p>
+
+<p>Vivamus ac nisl et nisi molestie eleifend et et enim. Nullam vehicula tristique interdum. Morbi auctor, metus nec consectetur auctor, tellus nisl viverra ipsum, sed dignissim lacus dolor nec tortor. Suspendisse sit amet nisl egestas, ultricies sem vitae, facilisis magna. Nulla ac quam gravida, tincidunt velit commodo, accumsan enim. Cras laoreet ex vitae felis facilisis fringilla. Etiam vel viverra tellus. Fusce luctus, tellus eget congue laoreet, neque elit bibendum lacus, in pellentesque elit mi vel nibh. Donec imperdiet ultricies nisl, condimentum vulputate lacus ornare vel. In in maximus nisl.</p>
+
+<p>Fusce ut sem vitae ipsum volutpat sodales. Phasellus et magna felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed sagittis, odio at dapibus finibus, nulla turpis varius ligula, at consequat sapien enim vel odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ante est, molestie id magna a, consequat tincidunt ante. Suspendisse varius iaculis dolor, ut auctor odio sollicitudin id. Pellentesque sed porta dui, quis molestie arcu. Nulla pretium lectus ut nibh interdum elementum.</p>
+
+<p>Sed molestie, nisi id pulvinar dictum, elit erat vehicula purus, a eleifend magna est quis arcu. Quisque fringilla, odio et posuere auctor, arcu lorem rutrum libero, eu ornare mi orci at augue. Maecenas finibus semper auctor. Cras elit odio, fermentum sit amet cursus vitae, auctor vitae risus. Quisque et ullamcorper sapien, ac rutrum nisl. Aliquam erat volutpat. Donec rhoncus posuere dolor a elementum. Suspendisse vitae libero dignissim, cursus tortor quis, dignissim enim. Integer eu commodo diam. Etiam faucibus urna id erat pretium vulputate. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec a viverra nunc. Maecenas ligula elit, auctor non ante vitae, lacinia laoreet leo. Mauris varius ligula vel dui tempor congue. Aenean convallis eu nulla id posuere.</p>
+
+</div>
+</body>
+</html>
